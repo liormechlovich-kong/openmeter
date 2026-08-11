@@ -1,6 +1,7 @@
 package chargeadapter_test
 
 import (
+	"strings"
 	"testing"
 	"time"
 
@@ -1169,7 +1170,7 @@ func sourceChargeBucketKey(sourceChargeID *string) string {
 		return "<nil>"
 	}
 
-	return *sourceChargeID
+	return strings.TrimSpace(*sourceChargeID)
 }
 
 func sourceSpendChargeKey(sourceChargeID, spendChargeID *string) string {
